@@ -172,7 +172,7 @@
             <!-- Reduced H2 size from text-3xl to text-2xl -->
             <h2 class="text-2xl font-extrabold text-center mb-1 text-blue-900">ප්‍රශ්නාවලියේ අවසන් ප්‍රතිඵලය</h2>
             <!-- Reduced text size from text-lg to text-base, border-b padding reduced -->
-            <p class="text-center text-base text-gray-700 mb-4 border-b pb-3 border-blue-400">GK ICT School - තොරතුරු තාක්ෂණ ප්‍රශ්නාවලිය</p>
+            <p class="text-center text-base text-gray-700 mb-4 border-b pb-3 border-blue-400">GK ICT Exam - තොරතුරු තාක්ෂණ ප්‍රශ්නාවලිය</p>
             
             <!-- Student Info Display on Result Card -->
             <div class="mb-4 text-center">
@@ -194,9 +194,10 @@
         
         <!-- Action Buttons (outside the capture area) -->
         <!-- Reduced button padding and margin -->
+        
         <!--button onclick="captureResultsAsImage()" class="w-full bg-green-600 text-white py-2.5 rounded-lg hover:bg-green-700 transition duration-300 mb-3 shadow-md transform hover:scale-[1.02]">
             ප්‍රතිඵල ලේඛනය බාගත කරන්න (JPEG)
-    </button-->
+        </button-->
         
         <!-- Reduced button padding -->
         <button onclick="resetQuizState()" class="w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition duration-300">
@@ -216,10 +217,10 @@
             <li>සියලුම ප්‍රශ්න සඳහා පිළිතුරු දියයුතුය.</li>
             <li>සෑම ප්‍රශ්නයක් සඳහාම පිළිතුරු දීමට ඔබට තත්පර 40ක කාලයක් ලැබේ.</li>
             <li>නියමිත කාලය තුළ පිළිතුරු ලබා දීමට නොහැකි වුවහොත් එය අවසන් ලකුණු වලට එකතු වන්නේ නැත.</li>
-            <li>ආරක්ෂක නීති (Security Rules):
+            <li>**ආරක්ෂක නීති (Security Rules):**
                 <ul class="list-disc list-inside ml-4 mt-1 space-y-0.5 text-xs text-red-600 font-medium"> <!-- Reduced nested list size -->
                     <li>right-click කිරීම සහ mobile long press කිරීම අවහිර කර ඇත.</li>
-                    <li>වෙනත් Tab එකකට හෝ Window එකකට මාරු වුවහොත් ප්‍රශ්නාවලිය නැවත මුල සිටම ආරම්භ වේ.</li>
+                    <li>වෙනත් Tab එකකට හෝ Window එකකට මාරු වුවහොත් ප්‍රශ්නාවලිය **නැවත මුල සිටම ආරම්භ වේ**.</li>
                     <li>Developer Tools විවෘත කිරීමේ කෙටිමං අවහිර කර ඇත.</li>
                 </ul>
             </li>
@@ -344,28 +345,407 @@
     // [ප්‍රශ්නාවලියේ දත්ත / QUIZ DATA SECTION]
     // ----------------------------------------------------------------------
     const quizData = [
-        // Q1
-        { question: "URL යන්නෙහි දිගු ස්වරූපය කුමක්ද?", correct: "Uniform Resource Locator.", distractors: ["Universal Record Linkage.", "Uniform Redirect Language."] },
-        // Q2
-        { question: "වීඩියෝ සම්මන්ත්‍රණ (video conferencing) සඳහා භාවිතා කරන මෘදුකාංග සඳහා උදාහරණ දෙකක් දෙන්න.", correct: "Zoom, Skype, GoToMeeting, Webex.", distractors: ["Microsoft Word, Excel.", "Adobe Photoshop, Illustrator."] },
-        // Q3
-        { question: "විද්‍යුත් තැපෑලක (e-mail) ලැබුණු පණිවිඩයක් වෙනත් අයෙකුට යැවීම හැඳින්වෙන්නේ කුමන නමකින්ද?", correct: "Forward කිරීම.", distractors: ["Reply කිරීම.", "Cc කිරීම."] },
-        // Q4
-        { question: "විද්‍යුත් තැපෑලක් සමඟ ගොනු (files) යැවීමේ ක්‍රියාවලිය කුමක්ද?", correct: "Attach කිරීම.", distractors: ["Download කිරීම.", "Upload කිරීම."] },
-        // Q5
-        { question: "විද්‍යුත් තැපෑලක 'To' ක්ෂේත්‍රයේ යොදනු ලබන්නේ කුමක්ද?", correct: "පණිවිඩයේ ප්‍රධාන ලබන්නාගේ විද්‍යුත් තැපැල් ලිපිනය.", distractors: ["පණිවිඩයේ සාරාංශය.", "පණිවිඩයේ පිටපතක් යවන අයගේ ලිපිනය."] },
-        // Q6
-        { question: "විද්‍යුත් තැපෑලක 'Cc' යන්නෙහි තේරුම කුමක්ද?", correct: "Carbon Copy, එනම් පණිවිඩයේ පිටපතක් යවන අනෙකුත් ලබන්නන්.", distractors: ["Confidential Copy, එනම් රහස් පිටපතක්.", "Communication Center."] },
-        // Q7
-        { question: "විද්‍යුත් තැපෑලක 'Bcc' යන්නෙහි තේරුම සහ එහි විශේෂත්වය කුමක්ද?", correct: "Blind Carbon Copy, මෙහි යොදන ලබන්නන්ව 'To' හෝ 'Cc' හි සිටින අනෙක් අයට නොපෙනේ.", distractors: ["Basic Copy, සියලුම ලබන්නන්ට පෙනේ.", "Business Communication Center."] },
-        // Q8
-        { question: "විද්‍යුත් තැපෑලක 'Subject' ක්ෂේත්‍රයේ ඇතුළත් කළ යුත්තේ කුමක්ද?", correct: "පණිවිඩයේ අන්තර්ගතය පිළිබඳ සාරාංශයක්.", distractors: ["ප්‍රධාන ලබන්නාගේ ලිපිනය.", "අදාල ගොනු (Attachments) වල නම්."] },
-        // Q9
-        { question: "www යන්නෙන් අදහස් කරන්නේ කුමක්ද?", correct: "ලෝක ව්‍යාප්ත ජාලය (world wide web).", distractors: ["ව්‍යාපාරික වෙබ් අඩවි ජාලය (World Wide Websites)", "පුළුල් ප්‍රදේශ ජාලය (Wide Area Network)"] },
-        // Q10
-        { question: "පුද්ගලයෙකුට අන්තර්ජාලය ඔස්සේ අපහාස කිරීම, තර්ජනය කිරීම හෝ අපහසුතාවයට පත් කිරීම හඳුන්වන්නේ කෙසේද?", correct: "සයිබර් හිරිහැර කිරීම (cyberbullying).", distractors: ["ෆිෂින් (phishing).", "හැකින් (hacking)."] },
-        
-    ];
+  {
+    "question": "URL යන්නෙහි දිගු ස්වරූපය කුමක්ද?",
+    "correct": "Uniform Resource Locator.",
+    "distractors": [
+      "Universal Remote Linkage.",
+      "Unified Retrieval Line."
+    ]
+  },
+  {
+    "question": "වීඩියෝ සම්මන්ත්‍රණ (video conferencing) සඳහා භාවිතා කරන මෘදුකාංග සඳහා උදාහරණ දෙකක් දෙන්න.",
+    "correct": "Zoom, Skype, GoToMeeting, Webex.",
+    "distractors": [
+      "MS Word, Excel.",
+      "Notepad, Paint."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක (e-mail) ලැබුණු පණිවිඩයක් වෙනත් අයෙකුට යැවීම හැඳින්වෙන්නේ කුමන නමකින්ද?",
+    "correct": "Forward කිරීම.",
+    "distractors": [
+      "Reply කිරීම.",
+      "Attach කිරීම."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක් සමඟ ගොනු (files) යැවීමේ ක්‍රියාවලිය කුමක්ද?",
+    "correct": "Attach කිරීම.",
+    "distractors": [
+      "Subject කිරීම.",
+      "Send කිරීම."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක To ක්ෂේත්‍රයේ යොදනු ලබන්නේ කුමක්ද?",
+    "correct": "පණිවිඩයේ ප්‍රධාන ලබන්නාගේ විද්‍යුත් තැපැල් ලිපිනය.",
+    "distractors": [
+      "පණිවිඩයේ මාතෘකාව.",
+      "පණිවිඩය යවන්නාගේ ලිපිනය."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක Cc යන්නෙහි තේරුම කුමක්ද?",
+    "correct": "Carbon Copy, එනම් පණිවිඩයේ පිටපතක් යවන අනෙකුත් ලබන්නන්.",
+    "distractors": [
+      "Current Contact.",
+      "Closed Circuit."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක Bcc යන්නෙහි තේරුම සහ එහි විශේෂත්වය කුමක්ද?",
+    "correct": "Blind Carbon Copy, මෙහි යොදන ලබන්නන්ව To හෝ Cc හි සිටින අනෙක් අයට නොපෙනේ.",
+    "distractors": [
+      "Basic Content Control, මෙහි යොදන අයට පමණක් පණිවිඩය ලැබේ.",
+      "Bold Carbon Copy, මෙහි යොදන ලබන්නන්ව To සහ Cc වල සිටින සියල්ලන්ටම පෙනේ."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපෑලක Subject ක්ෂේත්‍රයේ ඇතුළත් කළ යුත්තේ කුමක්ද?",
+    "correct": "පණිවිඩයේ අන්තර්ගතය පිළිබඳ කෙටි මාතෘකාවක්.",
+    "distractors": [
+      "ගොනු ඇමුණුම්.",
+      "ප්‍රධාන ලබන්නාගේ ලිපිනය."
+    ]
+  },
+  {
+    "question": "ඔබට ලැබෙන විද්‍යුත් තැපැල් පණිවිඩ ගබඩා වන ස්ථානය කුමක්ද?",
+    "correct": "Inbox.",
+    "distractors": [
+      "Sent.",
+      "Drafts."
+    ]
+  },
+  {
+    "question": "ඔබ විසින් යවන ලද විද්‍යුත් තැපැල් පණිවිඩ ගබඩා වන ස්ථානය කුමක්ද?",
+    "correct": "Sent.",
+    "distractors": [
+      "Inbox.",
+      "Trash."
+    ]
+  },
+  {
+    "question": "අනවශ්‍ය හෝ සැක සහිත විද්‍යුත් තැපැල් පණිවිඩ සාමාන්‍යයෙන් යොමු වන ෆෝල්ඩරය කුමක්ද?",
+    "correct": "Junk හෝ Spam.",
+    "distractors": [
+      "Inbox.",
+      "Sent."
+    ]
+  },
+  {
+    "question": "මකා දැමූ විද්‍යුත් තැපැල් පණිවිඩ තාවකාලිකව ගබඩා වන ස්ථානය කුමක්ද?",
+    "correct": "Trash.",
+    "distractors": [
+      "Archive.",
+      "Outbox."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපැල් ලිපින ගබඩා කර තබා ගන්නා විශේෂාංගය කුමක්ද?",
+    "correct": "Contacts හෝ Address book.",
+    "distractors": [
+      "Calendar.",
+      "Task Manager."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපැල් ලිපිනයක අනිවාර්යයෙන්ම අඩංගු විය යුතු සංකේතය කුමක්ද?",
+    "correct": "@ සංකේතය.",
+    "distractors": [
+      "# සංකේතය.",
+      "$ සංකේතය."
+    ]
+  },
+  {
+    "question": "HTML යන්නෙහි දිගු ස්වරූපය කුමක්ද?",
+    "correct": "Hyper Text Markup Language.",
+    "distractors": [
+      "High Technology Modern Language.",
+      "Hyperlink Text Management Logic."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක ප්‍රධාන අන්තර්ගතය ඇතුළත් කරන්නේ කුමන HTML ටැගය තුළද?",
+    "correct": "body ටැගය තුළ.",
+    "distractors": [
+      "head ටැගය තුළ.",
+      "html ටැගය තුළ."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක මාතෘකා තීරුවේ (title bar) දිස්වන නම සැකසීමට භාවිතා කරන HTML ටැගය කුමක්ද?",
+    "correct": "title ටැගය.",
+    "distractors": [
+      "h1 ටැගය.",
+      "head ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි පේළියක් බිඳීමට (line break) භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "br ටැගය.",
+    "distractors": [
+      "lb ටැගය.",
+      "p ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි විශාලතම ශීර්ෂය (heading) දැක්වීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "h1 ටැගය.",
+    "distractors": [
+      "h6 ටැගය.",
+      "b ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි කුඩාම ශීර්ෂය (heading) දැක්වීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "h6 ටැගය.",
+    "distractors": [
+      "h1 ටැගය.",
+      "small ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි අන්තර්ගතය වෙබ් පිටුවේ මධ්‍යයට ගැනීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "center ටැගය.",
+    "distractors": [
+      "mid ටැගය.",
+      "align ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි ඡේදයක් (paragraph) නිර්මාණය කිරීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "p ටැගය.",
+    "distractors": [
+      "par ටැගය.",
+      "br ටැගය."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක පසුබිම් වර්ණය (background color) වෙනස් කිරීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "bgcolor ටැගය.",
+    "distractors": [
+      "color ටැගය.",
+      "bg ටැගය."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවකට රූපයක් (image) එක් කිරීමට භාවිතා කරන ප්‍රධාන ටැගය සහ එහි අනිවාර්ය ගුණාංගය (attribute) කුමක්ද?",
+    "correct": "img src ටැගය. src යනු අනිවාර්ය ගුණාංගයයි.",
+    "distractors": [
+      "image alt ටැගය. alt යනු අනිවාර්ය ගුණාංගයයි.",
+      "picture url ටැගය. url යනු අනිවාර්ය ගුණාංගයයි."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක අධිසන්ධාන (hyperlink) නිර්මාණය කිරීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "a href ටැගය.",
+    "distractors": [
+      "link url ටැගය.",
+      "hlink ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි අක්ෂර තද පැහැයෙන් (bold) දැක්වීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "b ටැගය.",
+    "distractors": [
+      "strong ටැගය.",
+      "bold ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි අක්ෂර ඇල කර (italic) දැක්වීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "i ටැගය.",
+    "distractors": [
+      "e ටැගය.",
+      "italic ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි අක්ෂර යටින් ඉරක් ඇඳ (underline) දැක්වීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "u ටැගය.",
+    "distractors": [
+      "ul ටැගය.",
+      "i ටැගය."
+    ]
+  },
+  {
+    "question": "HTML කේත ලිවීම සඳහා භාවිතා කළ හැකි සරල text editor මෘදුකාංගයක් නම් කරන්න.",
+    "correct": "Notepad.",
+    "distractors": [
+      "MS Word.",
+      "Adobe Photoshop."
+    ]
+  },
+  {
+    "question": "HTML හි ටැගයක් අවසන් කරන බව දැක්වීමට (closing tag) භාවිතා කරන සංකේතය කුමක්ද?",
+    "correct": "/ (forward slash) සංකේතය.",
+    "distractors": [
+      "\\ (backward slash) සංකේතය.",
+      "# (hash) සංකේතය."
+    ]
+  },
+  {
+    "question": "අනුන්ගේ පරිගණක පද්ධති වලට අනවසරයෙන් ඇතුල් වීම හඳුන්වන්නේ කුමන නමකින්ද?",
+    "correct": "හැකින් (hacking).",
+    "distractors": [
+      "ෆිෂින් (phishing).",
+      "ස්පෑම් (spam)."
+    ]
+  },
+  {
+    "question": "පරිගණකයකට හානි කිරීමේ අරමුණින් නිර්මාණය කරන ලද වැඩසටහන් පොදුවේ හඳුන්වන්නේ කෙසේද?",
+    "correct": "පරිගණක වෛරස (computer virus).",
+    "distractors": [
+      "Cookies.",
+      "Pop-ups."
+    ]
+  },
+  {
+    "question": "පරිගණක වෛරස වලින් ආරක්ෂා වීම සඳහා ස්ථාපනය කරන මෘදුකාංග වර්ගය කුමක්ද?",
+    "correct": "ප්‍රති-වයිරස මෘදුකාංග (antivirus software).",
+    "distractors": [
+      "Word Processing software.",
+      "Web Browser."
+    ]
+  },
+  {
+    "question": "බලපත්‍රයක් නොමැතිව මෘදුකාංග පිටපත් කර භාවිතා කිරීම හඳුන්වන්නේ කුමන නමකින්ද?",
+    "correct": "මෘදුකාංග මුහුදු කොල්ලකෑම (software piracy).",
+    "distractors": [
+      "සයිබර් හිරිහැර කිරීම (cyberbullying).",
+      "හැකින් (hacking)."
+    ]
+  },
+  {
+    "question": "මෘදුකාංගයක් භාවිතා කිරීමේ නීති සහ කොන්දේසි ඇතුළත් ලේඛනය කුමක්ද?",
+    "correct": "බලපත්‍ර ගිවිසුම (licence agreement).",
+    "distractors": [
+      "වගකීම් පත්‍රය (warranty document).",
+      "අන්තර්ගත විස්තරය (content description)."
+    ]
+  },
+  {
+    "question": "අන්තර්ජාලය හරහා අන් අයට හිරිහැර කිරීම, බිය ගැන්වීම හෝ අපහසුතාවයට පත් කිරීම හඳුන්වන්නේ කෙසේද?",
+    "correct": "සයිබර් හිරිහැර කිරීම (cyberbullying).",
+    "distractors": [
+      "හැකින් (hacking).",
+      "ෆිෂින් (phishing)."
+    ]
+  },
+  {
+    "question": "සයිබර් හිරිහැර කිරීම් සඳහා බහුලව භාවිතා වන සමාජ මාධ්‍ය වේදිකා කිහිපයක් නම් කරන්න.",
+    "correct": "Facebook, Instagram, Snapchat, Twitter.",
+    "distractors": [
+      "MS Excel, Adobe Acrobat.",
+      "Notepad, Calculator."
+    ]
+  },
+  {
+    "question": "SMS යන්නෙහි දිගු ස්වරූපය කුමක්ද?",
+    "correct": "Short Message Service.",
+    "distractors": [
+      "Secure Mail System.",
+      "Simple Media Sharing."
+    ]
+  },
+  {
+    "question": "පරිශීලකයාගේ සංවේදී තොරතුරු (මුරපද, ක්‍රෙඩිට් කාඩ්පත් අංක) සොරකම් කිරීමට යොදාගන්නා වංචනික ක්‍රමය කුමක්ද?",
+    "correct": "ෆිෂින් (phishing).",
+    "distractors": [
+      "හැකින් (hacking).",
+      "ස්පෑම් (spam)."
+    ]
+  },
+  {
+    "question": "ආරක්ෂාව සඳහා භාවිතා කළ යුතු ශක්තිමත් මුරපදයක (strong password) අඩංගු විය යුතු අංග මොනවාද?",
+    "correct": "ඉංග්‍රීසි ලොකු අකුරු, කුඩා අකුරු, ඉලක්කම් සහ $, *, #, @ වැනි විශේෂ සංකේත.",
+    "distractors": [
+      "තමන්ගේ උපන්දිනය පමණි.",
+      "අඛණ්ඩ කුඩා අකුරු පමණි."
+    ]
+  },
+  {
+    "question": "අන්තර්ජාලයේ සැරිසරන විට හදිසියේ මතුවන අනවශ්‍ය වෙළඳ දැන්වීම් හෝ පණිවිඩ හඳුන්වන්නේ කෙසේද?",
+    "correct": "Pop-ups.",
+    "distractors": [
+      "Cookies.",
+      "Downloads."
+    ]
+  },
+  {
+    "question": "මෙහෙයුම් පද්ධතියක ආරක්ෂාව තහවුරු කිරීමට නිරතුරුවම කළ යුතු වැදගත් දෙයක් නම් කරන්න.",
+    "correct": "ස්වයංක්‍රීය යාවත්කාලීන කිරීම් ක්‍රියාත්මක කර තැබීම (turn on automatic updates).",
+    "distractors": [
+      "වීඩියෝ සම්මන්ත්‍රණ මෘදුකාංග භාවිතා කිරීම.",
+      "සියලුම ගොනු මකා දැමීම."
+    ]
+  },
+  {
+    "question": "HTML හි අක්ෂරවල වර්ණය (font color) සහ ශෛලිය (font style/face) වෙනස් කිරීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "font ටැගය (උදා: font color, font face).",
+    "distractors": [
+      "text ටැගය.",
+      "style ටැගය."
+    ]
+  },
+  {
+    "question": "විද්‍යුත් තැපැල් සේවා සපයන්නන් සඳහා උදාහරණ තුනක් දෙන්න.",
+    "correct": "Gmail, Yahoo Mail, Outlook Mail.",
+    "distractors": [
+      "MS Word, MS Excel.",
+      "Google Chrome, Mozilla Firefox."
+    ]
+  },
+  {
+    "question": "HTML හි අංක යෙදූ ලැයිස්තුවක් (ordered list) සෑදීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "ol ටැගය.",
+    "distractors": [
+      "ul ටැගය.",
+      "list ටැගය."
+    ]
+  },
+  {
+    "question": "HTML හි බුලට් යෙදූ ලැයිස්තුවක් (unordered list) සෑදීමට භාවිතා කරන ටැගය කුමක්ද?",
+    "correct": "ul ටැගය.",
+    "distractors": [
+      "ol ටැගය.",
+      "bullet ටැගය."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක රූපයක් යෙදීම සඳහා භාවිතා කරන HTML ටැගය කුමක්ද?",
+    "correct": "img ටැගය.",
+    "distractors": [
+      "picture ටැගය.",
+      "link ටැගය."
+    ]
+  },
+  {
+    "question": "USB ධාවකයක් (USB drive) හරහා පරිගණකයකට පැතිරිය හැකි තර්ජනය කුමක්ද?",
+    "correct": "පරිගණක වෛරස.",
+    "distractors": [
+      "Pop-ups.",
+      "ෆිෂින් (phishing)."
+    ]
+  },
+  {
+    "question": "දත්ත වල ආරක්ෂාව සඳහා, ඒවා තේරුම්ගත නොහැකි ආකෘතියකට පරිවර්තනය කිරීමේ ක්‍රියාවලිය කුමක්ද?",
+    "correct": "Encrypt කිරීම.",
+    "distractors": [
+      "Formatting කිරීම.",
+      "Compress කිරීම."
+    ]
+  },
+  {
+    "question": "වෙබ් පිටුවක මාතෘකාවක් යෙදීම සඳහා භාවිතා නොකරන HTML ටැගය කුමක්ද?",
+    "correct": "h7ටැගය.",
+    "distractors": [
+      "h1 ටැගය.",
+      "h2 ටැගය."
+    ]
+  }
+]
 
     // Array Shuffle Function (Fisher-Yates) - ප්‍රශ්න සහ පිළිතුරු අහඹු ලෙස පෙළගැස්වීම සඳහා
     function shuffleArray(array) {
@@ -617,7 +997,7 @@
         const percentage = Math.round((score / totalQuestions) * 100);
         
         // Update the detailed score elements
-        correctAnswersCountElement.textContent = `ඔබගේ නිවැරදි පිළිතුරු: ${score} / ${totalQuestions}`;
+        correctAnswersCountElement.textContent = `ඔබ ලබාගත් නිවැරදි පිළිතුරු: ${score} / ${totalQuestions}`;
         finalPercentageElement.textContent = `ලකුණු: ${percentage}%`;
 
         // Reset and set color class based on percentage for the percentage display
@@ -709,7 +1089,3 @@
 
 </body>
 </html>
-
-
-
-
