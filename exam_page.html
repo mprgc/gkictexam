@@ -91,8 +91,8 @@
         
         /* Styles for the Capture Card (Made smaller and more compact) */
         #result-card-to-capture {
-            background-color: #e0f7fa; /* Light cyan background for the certificate look */
-            border: 3px solid #00bcd4; /* Slightly thinner border */
+            background-color: #fae0fa; /* Light cyan background for the certificate look */
+            border: 3px solid #8000d4; /* Slightly thinner border */
         }
         .logo-placeholder {
             border-radius: 50%;
@@ -106,27 +106,27 @@
     <!-- Reduced H1 size from text-3xl to text-2xl -->
     <h1 class="text-2xl font-bold text-gray-800 mb-2 text-center">තොරතුරු තාක්ෂණ වාර විභාගය </h1>
     <!-- Reduced text size from text-md to text-sm -->
-    <p class="text-center text-sm text-blue-700 mb-6 font-semibold">GK ICT Exam | අපි විභාග ලියන අලුත් විදිහ.</p>
+    <p class="text-center text-sm text-purple-700 mb-6 font-semibold">GK ICT Exam | අපි විභාග ලියන අලුත් විදිහ.</p>
 
     <!-- 1. START SCREEN -->
     <!-- Reduced padding and shadow -->
-    <div id="start-screen" class="text-center p-5 bg-blue-50 rounded-lg shadow"> 
+    <div id="start-screen" class="text-center p-5 bg-purple-50 rounded-lg shadow"> 
         <!-- Reduced H2 size from text-2xl to text-xl -->
-        <h2 class="text-xl font-extrabold mb-4 text-blue-800">ප්‍රශ්නාවලිය ආරම්භ කිරීමට සූදානම්ද?</h2>
+        <h2 class="text-xl font-extrabold mb-4 text-purple-800">ප්‍රශ්නාවලිය ආරම්භ කිරීමට සූදානම්ද?</h2>
         
         <!-- Student Name Input -->
         <div class="mb-3 text-left">
             <!-- Reduced label size from text-sm to text-xs -->
             <label for="student-name" class="block text-xs font-medium text-gray-700 mb-1">ශිෂ්‍යයාගේ නම (Student Name):</label>
             <!-- Reduced input padding from p-3 to p-2.5 -->
-            <input type="text" id="student-name" placeholder="ඔබේ නම ඇතුළත් කරන්න" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm" required>
+            <input type="text" id="student-name" placeholder="ඔබේ නම ඇතුළත් කරන්න" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 shadow-sm" required>
         </div>
         <!-- Student Class Input -->
         <div class="mb-4 text-left">
             <!-- Reduced label size from text-sm to text-xs -->
             <label for="student-class" class="block text-xs font-medium text-gray-700 mb-1">පන්තිය (Class):</label>
             <!-- Reduced input padding from p-3 to p-2.5 -->
-            <input type="text" id="student-class" placeholder="උදා: 10 වසර සජීවා පන්තිය" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm" required>
+            <input type="text" id="student-class" placeholder="උදා: 10 වසර සජීවා පන්තිය" class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 shadow-sm" required>
         </div>
         
         <!-- Reduced button padding and text size -->
@@ -135,7 +135,7 @@
         </button>
         
         <!-- Reduced button padding and text size from text-2xl to text-xl -->
-        <button onclick="validateAndStartQuiz()" class="w-full bg-blue-600 text-white py-3 text-xl rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-[1.01]">
+        <button onclick="validateAndStartQuiz()" class="w-full bg-purple-600 text-white py-3 text-xl rounded-lg hover:bg-purple-700 transition duration-300 shadow-lg transform hover:scale-[1.01]">
             Start Quiz
         </button>
         <!-- Reduced validation message size from text-sm to text-xs -->
@@ -170,16 +170,16 @@
                 class="logo-placeholder w-16 h-16 mx-auto mb-3"
             >
             <!-- Reduced H2 size from text-3xl to text-2xl -->
-            <h2 class="text-2xl font-extrabold text-center mb-1 text-blue-900">ප්‍රශ්නාවලියේ අවසන් ප්‍රතිඵලය</h2>
+            <h2 class="text-2xl font-extrabold text-center mb-1 text-purple-900">ප්‍රශ්නාවලියේ අවසන් ප්‍රතිඵලය</h2>
             <!-- Reduced text size from text-lg to text-base, border-b padding reduced -->
-            <p class="text-center text-base text-gray-700 mb-4 border-b pb-3 border-blue-400">GK ICT Exam - තොරතුරු තාක්ෂණ ප්‍රශ්නාවලිය</p>
+            <p class="text-center text-base text-gray-700 mb-4 border-b pb-3 border-purple-400">GK ICT Exam - තොරතුරු තාක්ෂණ ප්‍රශ්නාවලිය</p>
             
             <!-- Student Info Display on Result Card -->
             <div class="mb-4 text-center">
                 <!-- Reduced text size from text-xl to text-lg -->
-                <p class="text-lg font-bold text-gray-800 mb-1">නම: <span id="display-student-name" class="font-extrabold text-blue-800">--</span></p>
+                <p class="text-lg font-bold text-gray-800 mb-1">නම: <span id="display-student-name" class="font-extrabold text-purple-800">--</span></p>
                 <!-- Reduced text size from text-md to text-sm -->
-                <p class="text-sm font-semibold text-gray-600">පන්තිය: <span id="display-student-class" class="font-bold text-blue-700">--</span></p>
+                <p class="text-sm font-semibold text-gray-600">පන්තිය: <span id="display-student-class" class="font-bold text-purple-700">--</span></p>
             </div>
 
             <!-- Detailed Score and Percentage Display -->
@@ -200,7 +200,7 @@
         </button-->
         
         <!-- Reduced button padding -->
-        <button onclick="resetQuizState()" class="w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition duration-300">
+        <button onclick="resetQuizState()" class="w-full bg-purple-600 text-white py-2.5 rounded-lg hover:bg-purple-700 transition duration-300">
             නැවත මුලට යන්න (Go to Start)
         </button>
     </div>
@@ -210,25 +210,25 @@
 <div id="instruction-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center hidden">
     <div id="modal-content" class="bg-white rounded-xl shadow-2xl p-5 m-4 max-w-sm sm:max-w-md w-full max-h-[90vh] overflow-y-auto">
         <!-- Reduced H3 size from text-2xl to text-xl -->
-        <h3 class="text-xl font-bold text-blue-700 mb-3 border-b pb-1.5">ප්‍රශ්නාවලියේ උපදෙස්</h3>
+        <h3 class="text-xl font-bold text-purple-700 mb-3 border-b pb-1.5">ප්‍රශ්නාවලියේ උපදෙස්</h3>
         
         <!-- Reduced text size from text-base to text-sm -->
         <ul class="text-left text-gray-700 space-y-2 list-disc list-inside mb-4 text-sm">
             <li>සියලුම ප්‍රශ්න සඳහා පිළිතුරු දියයුතුය.</li>
             <li>සෑම ප්‍රශ්නයක් සඳහාම පිළිතුරු දීමට ඔබට තත්පර 40ක කාලයක් ලැබේ.</li>
             <li>නියමිත කාලය තුළ පිළිතුරු ලබා දීමට නොහැකි වුවහොත් එය අවසන් ලකුණු වලට එකතු වන්නේ නැත.</li>
-            <li>**ආරක්ෂක නීති (Security Rules):**
+            <li>👮 ආරක්ෂක නීති (Security Rules):
                 <ul class="list-disc list-inside ml-4 mt-1 space-y-0.5 text-xs text-red-600 font-medium"> <!-- Reduced nested list size -->
                     <li>right-click කිරීම සහ mobile long press කිරීම අවහිර කර ඇත.</li>
-                    <li>වෙනත් Tab එකකට හෝ Window එකකට මාරු වුවහොත් ප්‍රශ්නාවලිය **නැවත මුල සිටම ආරම්භ වේ**.</li>
+                    <li>වෙනත් Tab එකකට හෝ Window එකකට මාරු වුවහොත් ප්‍රශ්නාවලිය නැවත මුල සිටම ආරම්භ වේ.</li>
                     <li>Developer Tools විවෘත කිරීමේ කෙටිමං අවහිර කර ඇත.</li>
                 </ul>
             </li>
         </ul>
         
         <!-- Reduced button padding -->
-        <button onclick="hideInstructions()" class="w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg">
-            තේරුම් ගත්තා (Got It)
+        <button onclick="hideInstructions()" class="w-full bg-purple-600 text-white py-2.5 rounded-lg hover:bg-purple-700 transition duration-300 shadow-lg">
+            තේරුම් ගත්තා 👍(Got It)
         </button>
     </div>
 </div>
@@ -793,7 +793,7 @@
         if (nextButton) {
             nextButton.disabled = false;
             nextButton.classList.remove('bg-gray-400', 'disabled');
-            nextButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            nextButton.classList.add('bg-purple-600', 'hover:bg-purple-700');
         }
     }
 
@@ -863,7 +863,7 @@
         quizContainer.innerHTML = `
             <div class="mb-4"> <!-- Reduced margin -->
                 <!-- Reduced text size from text-lg to text-base -->
-                <p class="text-base font-semibold text-cyan-700 mb-2">ප්‍රශ්නය ${questionNumber} / ${totalQuestions}</p>
+                <p class="text-base font-semibold text-purple-700 mb-2">ප්‍රශ්නය ${questionNumber} / ${totalQuestions}</p>
                 <!-- Reduced text size from text-xl to text-lg -->
                 <h2 class="question-text text-lg font-bold text-gray-700">${currentQ.question}</h2>
             </div>
@@ -937,7 +937,7 @@
         // Next බොත්තම සක්‍රිය කිරීම
         nextButton.disabled = false;
         nextButton.classList.remove('bg-gray-400', 'disabled');
-        nextButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+        nextButton.classList.add('bg-purple-600', 'hover:bg-purple-700');
     }
 
     // ඊළඟ ප්‍රශ්නයට යාමේ කාර්යය
